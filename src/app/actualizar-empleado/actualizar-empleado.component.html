@@ -1,0 +1,130 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Edicion de empleado</h3>
+    <form (ngSubmit)= "onSubmit()" #empleadoForm = "ngForm">
+      <div class="form-group">
+        <label>Nombre : </label>
+        <input type = "text"
+        class="form-control"
+        id = "nombre"
+        [(ngModel)] = "empleado.nombre"
+        name = "nombre"
+        required
+        minlength="4"
+        maxlength="10"
+        placeholder="Digite su nombre "
+        #nombre = "ngModel"
+        >
+        <div class="alert alert-danger" *ngIf= "nombre.invalid && (nombre.dirty || nombre.touched)">
+          <div *ngIf = "nombre.errors.required">
+            Digite su nombre por favor
+          </div>
+          <div *ngIf = "nombre.errors.minlength">
+            El nombre tiene que contener como minimo 4 caracteres
+          </div>
+          <div *ngIf = "nombre.errors.maxlength">
+            El nombre tiene que tener como maximo 10 caracteres
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Apellido : </label>
+        <input type = "text"
+        class="form-control"
+        id = "apellido"
+        [(ngModel)] = "empleado.apellido"
+        name = "apellido"
+        required
+        minlength="4"
+        maxlength="10"
+        placeholder="Digite su apellido "
+        #nombre = "ngModel"
+        >
+        <div class="alert alert-danger" *ngIf= "apellido.invalid && (apellido.dirty || apellido.touched)">
+          <div *ngIf = "apellido.errors.required">
+            Digite su apellido por favor
+          </div>
+          <div *ngIf = "apellido.errors.minlength">
+            El apellido tiene que contener como minimo 4 caracteres
+          </div>
+          <div *ngIf = "apellido.errors.maxlength">
+            El apellido tiene que tener como maximo 10 caracteres
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Telefono : </label>
+        <input type = "text"
+        class="form-control"
+        id = "telefono"
+        [(ngModel)] = "empleado.telefono"
+        name = "telefono"
+        required
+        minlength="4"
+        maxlength="10"
+        placeholder="Digite su telefono "
+        #nombre = "ngModel"
+        >
+      </div>
+      <div class="form-group">
+        <label>Correo : </label>
+        <input type = "text"
+        class="form-control"
+        id = "correo"
+        [(ngModel)] = "empleado.correo"
+        name = "correo"
+        required
+        minlength="4"
+        maxlength="10"
+        placeholder="Digite su correo "
+        #nombre = "ngModel"
+        >
+      </div>
+      <div class="form-group">
+        <label>Fecha de Nacimiento : </label>
+        <input type = "text"
+        class="form-control"
+        id = "fecha_de_nacimiento"
+        [(ngModel)] = "empleado.fecha_de_nacimiento"
+        name = "fecha_de_nacimiento"
+        required
+        minlength="4"
+        maxlength="10"
+        placeholder="Digite su fecha de nacimiento "
+        #nombre = "ngModel"
+        >
+        
+      </div>
+      <div class="form-group">
+        <label>Tipo de documento : </label>
+        <input type = "text"
+        class="form-control"
+        id = "tipo_documento"
+        [(ngModel)] = "empleado.tipo_documento"
+        name = "tipo_documento"
+        required
+        minlength="4"
+        maxlength="10"
+        placeholder="Digite su tipo de documento "
+        #nombre = "ngModel"
+        >
+      </div>
+  
+      <div class="form-group">
+        <label>Documento : </label>
+        <input type = "text"
+        class="form-control"
+        id = "documento"
+        [(ngModel)] = "empleado.documento"
+        name = "documento"
+        required
+        minlength="4"
+        maxlength="10"
+        placeholder="Digite su documento "
+        #apellido = "ngModel"
+        >
+      </div>
+       
+      <button class="btn btn-success">Guardar</button>
+    </form>
+  </div>
+  
